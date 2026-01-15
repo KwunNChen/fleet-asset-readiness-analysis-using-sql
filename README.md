@@ -1,5 +1,5 @@
 # Fleet Asset Readiness Analysis Using SQL
-
+(WORK IN PROGRESS, FILES NOT UPLOADED YET)
 ## Overview
 This project analyzes asset readiness in a simulated Class 8 trucking fleet using SQL.
 The objective is to identify which assets most negatively impact operational readiness
