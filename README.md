@@ -28,13 +28,21 @@ The analysis uses a logistics dataset representing three years (2022–2024) of 
 ## Project Structure
 logistics-sql/
 ├── data/ # Raw CSV files
+
 ├── sql/ # SQL scripts
+
 │ ├── 00_create_tables.sql #Creates tables
+
 │ ├── 01_import.sql #Imports data to fill in 00_create_tables.sql and skips first row (headers)
+
 | ├── 02_analysis.sql #Sanity check, exploring the data
+
 │ ├── 03_build_summary.sql #Creates the mega-table used in 04_asset_readiness.sql's analysis
+
 │ └── 04_asset_readiness.sql #Analysis and answering questions
+
 ├── logistics.db # SQLite database
+
 └── README.md
 
 
