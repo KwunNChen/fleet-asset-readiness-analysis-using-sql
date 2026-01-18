@@ -1,5 +1,5 @@
 # Fleet Asset Readiness Analysis Using SQL
-(WORK IN PROGRESS, FILES NOT UPLOADED YET)
+
 ## Overview
 This project analyzes asset readiness in a simulated Class 8 trucking fleet using SQL.
 The objective is to identify which assets most negatively impact operational readiness
@@ -27,11 +27,11 @@ The analysis uses a logistics dataset representing three years (2022–2024) of 
 
 ## Project Structure
 logistics-sql/
-├── data/ # Raw CSV files
-
-├── sql/ # SQL scripts
+├── data.zip/ # Raw CSV files, unzip it
 
 ├── output/ # Outputs of the answers to each question in .csv format
+
+├── sql/ # SQL scripts
 
 │ ├── 00_create_tables.sql #Creates tables
 
@@ -43,9 +43,9 @@ logistics-sql/
 
 │ └── 04_asset_readiness.sql #Analysis and answering questions
 
-| └── 05_export_outputs.sql
+| └── 05_export_outputs.sql #04 asset_readiness answers but it copies outputs
 
-├── logistics.db # SQLite database
+├── logistics.zip # SQLite database, unzip it
 
 └── README.md
 
