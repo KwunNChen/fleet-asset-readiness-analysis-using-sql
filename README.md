@@ -48,12 +48,18 @@ logistics-sql/
 
 | └── 05_export_outputs.sql #04 asset_readiness answers but it copies outputs
 
+| └── 06_risk_score.sql #Utilizes stats from truck_summary to calculate score
+
 ├── logistics.db # SQLite database, alternatively can use logistics.zip. ONLY USE ONE
 
 ├── logistics.zip # SQLite database, unzip it
 
 └── README.md
 
+### Readiness Risk Score
+A composite 0–1 risk score was computed per truck by normalizing downtime-per-mile, total downtime, maintenance events, and maintenance cost, then combining them with weighted importance. Higher scores indicate worse readiness efficiency and sustainment burden.
+
+See `outputs/q9_truck_risk_score.csv`.
 
 ## Methodology
 1. Imported normalized CSV data into a SQLite database.
