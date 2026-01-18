@@ -101,6 +101,17 @@ used in logistics, infrastructure, and defense-adjacent environments.
 - Incorporate fuel efficiency and cost-per-mile metrics
 - Visualize readiness metrics using a dashboarding tool
 
+## Run Everything (Reproducible Pipeline)
+
+```bash```
+sqlite3 logistics.db ".read sql/99_run_all.sql"
+Creates tables, imports raw data, builds summaries, runs readiness analysis, computes risk scores, exports all outputs
+
+# To committ
+```powershell```
+git add sql/99_run_all.sql
+git commit -m "Add one-command reproducible SQL pipeline"
+git push
 
 ## Findings (SQL Outputs)
 
