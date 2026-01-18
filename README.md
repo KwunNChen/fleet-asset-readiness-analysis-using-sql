@@ -1,13 +1,13 @@
 # Fleet Asset Readiness Analysis Using SQL
 
 ## Overview
-This project analyzes asset readiness in a simulated Class 8 trucking fleet using SQL.
+This mini-project analyzes asset readiness in a simulated Class 8 trucking fleet using SQL.
 The objective is to identify which assets most negatively impact operational readiness
 by examining maintenance downtime, maintenance frequency, and utilization patterns.
 
 Rather than working directly with raw event logs, the analysis builds an asset-level
 summary (one row per truck) to support decision-making similar to real-world fleet,
-sustainment, and readiness reviews.
+sustainment, and readiness reviews. This mini-project also utilizes .git to push and pull commits instead of manually doing it on the web.
 
 ## Dataset
 The analysis uses a logistics dataset representing three years (2022–2024) of fleet operations for a fictional Class 8 trucking company. The dataset contains over 85,000 records across 14 normalized tables, including:
