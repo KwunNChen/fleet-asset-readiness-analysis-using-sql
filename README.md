@@ -27,7 +27,10 @@ The analysis uses a logistics dataset representing three years (2022–2024) of 
 
 ## Project Structure
 logistics-sql/
-├── data.zip/ # Raw CSV files, unzip it
+
+├── data/ # Raw CSV files, alternatively can use data.zip. ONLY USE ONE
+
+├── data.zip/ # Raw CSV files, unzip it if you wanna use it
 
 ├── output/ # Outputs of the answers to each question in .csv format
 
@@ -44,6 +47,8 @@ logistics-sql/
 │ └── 04_asset_readiness.sql #Analysis and answering questions
 
 | └── 05_export_outputs.sql #04 asset_readiness answers but it copies outputs
+
+├── logistics.db # SQLite database, alternatively can use logistics.zip. ONLY USE ONE
 
 ├── logistics.zip # SQLite database, unzip it
 
