@@ -31,6 +31,8 @@ logistics-sql/
 
 ├── sql/ # SQL scripts
 
+├── output/ # Outputs of the answers to each question in .csv format
+
 │ ├── 00_create_tables.sql #Creates tables
 
 │ ├── 01_import.sql #Imports data to fill in 00_create_tables.sql and skips first row (headers)
@@ -40,6 +42,8 @@ logistics-sql/
 │ ├── 03_build_summary.sql #Creates the mega-table used in 04_asset_readiness.sql's analysis
 
 │ └── 04_asset_readiness.sql #Analysis and answering questions
+
+| └── 05_export_outputs.sql
 
 ├── logistics.db # SQLite database
 
@@ -85,3 +89,15 @@ used in logistics, infrastructure, and defense-adjacent environments.
 - Bucket asset age into ranges (e.g., 0–2, 3–5, 6–8 years)
 - Incorporate fuel efficiency and cost-per-mile metrics
 - Visualize readiness metrics using a dashboarding tool
+
+
+## Findings (SQL Outputs)
+
+- **Top downtime assets:** TRK00003 (~1133 hrs), TRK00044 (~1080 hrs), TRK00073 (~996 hrs) contributed the most downtime and represent primary readiness risk drivers.
+- **Highest maintenance frequency:** TRK00003 led with **41** maintenance events; multiple trucks clustered in the 30s, indicating recurring sustainment burden.
+- **Age vs readiness:** Downtime and maintenance cost did **not** show a strong monotonic relationship with model year; asset age alone appears to be a weak predictor.
+- **Downtime concentration:** The **worst 10%** of trucks contributed **~15.4%** of total fleet downtime (11140.5 / 72230.5).
+- **Maintenance drivers:** Downtime was spread across maintenance categories (Inspection/Preventive/Repair/Engine among the highest), suggesting no single maintenance type dominated total downtime.
+- **Facility impact:** Los Angeles showed the highest total downtime among facilities, with several other hubs close behind—suggesting downtime is distributed across major operating locations.
+
+See `outputs/` for exported CSV results.
