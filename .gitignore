@@ -1,0 +1,11 @@
+# SQLite temporary files
+*.db-journal
+*.db-wal
+*.db-shm
+
+# VS Code
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
