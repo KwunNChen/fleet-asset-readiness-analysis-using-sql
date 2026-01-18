@@ -90,6 +90,13 @@ GROUP BY facility_location
 ORDER BY total_downtime_hours DESC
 LIMIT 10;
 
+--06_risk_score.sql
+.output outputs/q9_truck_risk_score.csv
+SELECT
+  truck_id,
+  risk_score
+FROM truck_risk_score
+ORDER BY risk_score DESC;
 .output stdout
 .mode column
 .headers on
