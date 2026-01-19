@@ -1,5 +1,7 @@
 # Fleet Asset Readiness Analysis Using SQL
 
+WORK IN PROGRESS
+
 ## Overview
 This mini-project analyzes asset readiness in a simulated Class 8 trucking fleet using SQL.
 The objective is to identify which assets most negatively impact operational readiness
@@ -24,6 +26,7 @@ The analysis uses a logistics dataset representing three years (2022–2024) of 
 - SQLite
 - SQL
 - Visual Studio Code (terminal-based workflow)
+- Snowflake's Tableau
 
 ## Project Structure
 logistics-sql/
@@ -57,11 +60,6 @@ logistics-sql/
 ├── logistics.zip # SQLite database, unzip it
 
 └── README.md
-
-### Readiness Risk Score
-A composite 0–1 risk score was computed per truck by normalizing downtime-per-mile, total downtime, maintenance events, and maintenance cost, then combining them with weighted importance. Higher scores indicate worse readiness efficiency and sustainment burden.
-
-See `outputs/q9_truck_risk_score.csv`.
 
 ## Methodology
 1. Imported normalized CSV data into a SQLite database.
@@ -99,21 +97,10 @@ The workflow and analysis are representative of fleet readiness and sustainment 
 used in logistics, infrastructure, and defense-adjacent environments.
 
 ## Future Work
-- Bucket asset age into ranges (e.g., 0–2, 3–5, 6–8 years)
-- Incorporate fuel efficiency and cost-per-mile metrics
-- Visualize readiness metrics using a dashboarding tool
+- Visualize using a dashboard from Tableau
 
-## Run Everything (Reproducible Pipeline)
-
-```bash```
-sqlite3 logistics.db ".read sql/99_run_all.sql"
-Creates tables, imports raw data, builds summaries, runs readiness analysis, computes risk scores, exports all outputs
-
-# To committ
-```powershell```
-git add sql/99_run_all.sql
-git commit -m "Add one-command reproducible SQL pipeline"
-git push
+### Readiness Risk Score
+A composite 0–1 risk score was computed per truck by normalizing downtime-per-mile, total downtime, maintenance events, and maintenance cost, then combining them with weighted importance. Higher scores indicate worse readiness efficiency and sustainment burden.
 
 ## Findings (SQL Outputs)
 
@@ -125,3 +112,14 @@ git push
 - **Facility impact:** Los Angeles showed the highest total downtime among facilities, with several other hubs close behind—suggesting downtime is distributed across major operating locations.
 
 See `outputs/` for exported CSV results.
+
+## Quick Start
+
+## Run Everything (Reproducible Pipeline)
+
+```bash```
+Run in terminal:
+
+sqlite3 logistics.db ".read sql/99_run_all.sql"
+
+It will read the other sql files which creates tables, imports raw data, builds summaries, runs readiness analysis, computes risk scores, exports all outputs
