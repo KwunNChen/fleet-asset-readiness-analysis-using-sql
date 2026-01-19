@@ -1,13 +1,13 @@
 # Fleet Asset Readiness Analysis Using SQL
 
 ## Overview
-This project analyzes asset readiness in a simulated Class 8 trucking fleet using SQL.
+This mini-project analyzes asset readiness in a simulated Class 8 trucking fleet using SQL.
 The objective is to identify which assets most negatively impact operational readiness
 by examining maintenance downtime, maintenance frequency, and utilization patterns.
 
 Rather than working directly with raw event logs, the analysis builds an asset-level
 summary (one row per truck) to support decision-making similar to real-world fleet,
-sustainment, and readiness reviews.
+sustainment, and readiness reviews. This mini-project also utilizes .git to push and pull commits instead of manually doing it on the web.
 
 ## Dataset
 The analysis uses a logistics dataset representing three years (2022–2024) of fleet operations for a fictional Class 8 trucking company. The dataset contains over 85,000 records across 14 normalized tables, including:
@@ -27,7 +27,10 @@ The analysis uses a logistics dataset representing three years (2022–2024) of 
 
 ## Project Structure
 logistics-sql/
-├── data.zip/ # Raw CSV files, unzip it
+
+├── data/ # Raw CSV files, alternatively can use data.zip. ONLY USE ONE
+
+├── data.zip/ # Raw CSV files, unzip it if you wanna use it
 
 ├── output/ # Outputs of the answers to each question in .csv format
 
@@ -45,10 +48,18 @@ logistics-sql/
 
 | └── 05_export_outputs.sql #04 asset_readiness answers but it copies outputs
 
+| └── 06_risk_score.sql #Utilizes stats from truck_summary to calculate score
+
+├── logistics.db # SQLite database, alternatively can use logistics.zip. ONLY USE ONE
+
 ├── logistics.zip # SQLite database, unzip it
 
 └── README.md
 
+### Readiness Risk Score
+A composite 0–1 risk score was computed per truck by normalizing downtime-per-mile, total downtime, maintenance events, and maintenance cost, then combining them with weighted importance. Higher scores indicate worse readiness efficiency and sustainment burden.
+
+See `outputs/q9_truck_risk_score.csv`.
 
 ## Methodology
 1. Imported normalized CSV data into a SQLite database.
@@ -90,6 +101,17 @@ used in logistics, infrastructure, and defense-adjacent environments.
 - Incorporate fuel efficiency and cost-per-mile metrics
 - Visualize readiness metrics using a dashboarding tool
 
+## Run Everything (Reproducible Pipeline)
+
+```bash```
+sqlite3 logistics.db ".read sql/99_run_all.sql"
+Creates tables, imports raw data, builds summaries, runs readiness analysis, computes risk scores, exports all outputs
+
+# To committ
+```powershell```
+git add sql/99_run_all.sql
+git commit -m "Add one-command reproducible SQL pipeline"
+git push
 
 ## Findings (SQL Outputs)
 
