@@ -1,13 +1,10 @@
--- ============================================
--- 99_run_all.sql
--- Full reproducible pipeline (one-command run)
--- ============================================
+--Run sqlite3 logistics.db ".read sql/99_run_all.sql" to run this program
 
 -- Core setup
 .read sql/00_create_tables.sql
 .read sql/01_import.sql
 
--- Build derived tables
+-- Build key table/summary (truck_summary table)
 .read sql/03_build_summary.sql
 
 -- Analysis

@@ -22,3 +22,10 @@ FROM trips
 GROUP BY truck_id
 ORDER BY total_miles DESC
 LIMIT 10;
+
+-- Note for README.md: I learned new SQL functions like COALESCE() to handle NULLs.
+-- Also practiced aggregations with SUM() and COUNT(), and grouping with GROUP BY.
+-- Also utilized LEFT JOINs to combine data from multiple tables.
+-- CASE statements for conditional logic, and ORDER BY for sorting results.
+-- Utilized WITH clauses (CTEs) for better query organization.
+-- NTILE() function for ranking data into percentiles.

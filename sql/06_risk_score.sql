@@ -1,4 +1,3 @@
-.headers on
 .mode column
 --The NULLIF() function returns NULL if two expressions are equal, otherwise it returns the first expression.
 --I'll use this to avoid division by zero errors during normalization. 
@@ -49,3 +48,33 @@ SELECT
 FROM normalized;
 --Scores out of 1.0 indicate highest risk.
 --Lower scores indicate better performance.
+
+DROP TABLE IF EXISTS truck_risk_labeled;
+.print 'RISK SCORE TIERS AND RECOMMENDED ACTIONS:';
+CREATE TABLE truck_risk_labeled AS
+SELECT
+  truck_id,
+  risk_score,
+  CASE
+    WHEN risk_score >= 0.85 THEN 'Critical'
+    WHEN risk_score >= 0.70 THEN 'High'
+    WHEN risk_score >= 0.50 THEN 'Medium'
+    ELSE 'Low'
+  END AS risk_tier,
+  CASE
+    WHEN risk_score >= 0.85 THEN 'Inspect now; prioritize corrective maintenance; review replacement planning.'
+    WHEN risk_score >= 0.70 THEN 'Schedule maintenance next cycle; monitor weekly; investigate repeat issues.'
+    WHEN risk_score >= 0.50 THEN 'Routine preventive maintenance; monitor monthly.'
+    ELSE 'No action needed; benchmark asset.'
+  END AS recommended_action
+FROM truck_risk_score;
+
+-- This runs when reading sql/06_risk_score.sql
+SELECT
+  truck_id,
+  ROUND(risk_score, 4) AS risk_score,
+  risk_tier,
+  recommended_action
+FROM truck_risk_labeled
+ORDER BY risk_score DESC
+LIMIT 25;

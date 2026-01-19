@@ -1,0 +1,195 @@
+truck_id  risk_score  risk_tier  recommended_action                                          
+--------  ----------  ---------  ------------------------------------------------------------
+TRK00044  0.9775      Critical   Inspect now; prioritize corrective maintenance; review repla
+                                 cement planning.                                            
+
+TRK00073  0.9572      Critical   Inspect now; prioritize corrective maintenance; review repla
+                                 cement planning.                                            
+
+TRK00014  0.9045      Critical   Inspect now; prioritize corrective maintenance; review repla
+                                 cement planning.                                            
+
+TRK00033  0.8395      High       Schedule maintenance next cycle; monitor weekly; investigate
+                                  repeat issues.                                             
+
+TRK00013  0.8036      High       Schedule maintenance next cycle; monitor weekly; investigate
+                                  repeat issues.                                             
+
+TRK00062  0.7757      High       Schedule maintenance next cycle; monitor weekly; investigate
+                                  repeat issues.                                             
+
+TRK00026  0.7528      High       Schedule maintenance next cycle; monitor weekly; investigate
+                                  repeat issues.                                             
+
+TRK00038  0.7457      High       Schedule maintenance next cycle; monitor weekly; investigate
+                                  repeat issues.                                             
+
+TRK00099  0.7222      High       Schedule maintenance next cycle; monitor weekly; investigate
+                                  repeat issues.                                             
+
+TRK00078  0.7101      High       Schedule maintenance next cycle; monitor weekly; investigate
+                                  repeat issues.                                             
+
+TRK00071  0.6969      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00052  0.6903      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00108  0.6769      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00105  0.6743      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00085  0.6737      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00103  0.6618      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00115  0.6588      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00067  0.6283      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00040  0.6224      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00072  0.6071      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00120  0.5973      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00106  0.594       Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00020  0.5914      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00054  0.5887      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00050  0.5878      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00055  0.5798      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00030  0.5796      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00063  0.573       Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00002  0.5717      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00001  0.5597      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00018  0.5515      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00112  0.5291      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00111  0.5276      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00060  0.5253      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00057  0.5251      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00068  0.5184      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00024  0.5168      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00053  0.5084      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00011  0.508       Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00091  0.5071      Medium     Routine preventive maintenance; monitor monthly.            
+
+TRK00065  0.4978      Low        No action needed; benchmark asset.                          
+
+TRK00110  0.4967      Low        No action needed; benchmark asset.                          
+
+TRK00010  0.4929      Low        No action needed; benchmark asset.                          
+
+TRK00006  0.4876      Low        No action needed; benchmark asset.                          
+
+TRK00090  0.4867      Low        No action needed; benchmark asset.                          
+
+TRK00023  0.4861      Low        No action needed; benchmark asset.                          
+
+TRK00082  0.4568      Low        No action needed; benchmark asset.                          
+
+TRK00031  0.4552      Low        No action needed; benchmark asset.                          
+
+TRK00045  0.4492      Low        No action needed; benchmark asset.                          
+
+TRK00051  0.4481      Low        No action needed; benchmark asset.                          
+
+TRK00079  0.4421      Low        No action needed; benchmark asset.                          
+
+TRK00093  0.4396      Low        No action needed; benchmark asset.                          
+
+TRK00089  0.4316      Low        No action needed; benchmark asset.                          
+
+TRK00041  0.4228      Low        No action needed; benchmark asset.                          
+
+TRK00039  0.421       Low        No action needed; benchmark asset.                          
+
+TRK00025  0.4158      Low        No action needed; benchmark asset.                          
+
+TRK00061  0.4121      Low        No action needed; benchmark asset.                          
+
+TRK00048  0.4079      Low        No action needed; benchmark asset.                          
+
+TRK00029  0.4026      Low        No action needed; benchmark asset.                          
+
+TRK00096  0.3953      Low        No action needed; benchmark asset.                          
+
+TRK00064  0.3804      Low        No action needed; benchmark asset.                          
+
+TRK00080  0.3714      Low        No action needed; benchmark asset.                          
+
+TRK00015  0.3685      Low        No action needed; benchmark asset.                          
+
+TRK00009  0.3531      Low        No action needed; benchmark asset.                          
+
+TRK00035  0.3432      Low        No action needed; benchmark asset.                          
+
+TRK00004  0.3374      Low        No action needed; benchmark asset.                          
+
+TRK00095  0.3262      Low        No action needed; benchmark asset.                          
+
+TRK00043  0.3243      Low        No action needed; benchmark asset.                          
+
+TRK00113  0.3174      Low        No action needed; benchmark asset.                          
+
+TRK00092  0.3147      Low        No action needed; benchmark asset.                          
+
+TRK00008  0.3063      Low        No action needed; benchmark asset.                          
+
+TRK00012  0.3015      Low        No action needed; benchmark asset.                          
+
+TRK00098  0.2976      Low        No action needed; benchmark asset.                          
+
+TRK00114  0.2956      Low        No action needed; benchmark asset.                          
+
+TRK00059  0.2912      Low        No action needed; benchmark asset.                          
+
+TRK00086  0.2887      Low        No action needed; benchmark asset.                          
+
+TRK00058  0.2853      Low        No action needed; benchmark asset.                          
+
+TRK00074  0.2655      Low        No action needed; benchmark asset.                          
+
+TRK00016  0.2598      Low        No action needed; benchmark asset.                          
+
+TRK00097  0.2559      Low        No action needed; benchmark asset.                          
+
+TRK00101  0.243       Low        No action needed; benchmark asset.                          
+
+TRK00007  0.2337      Low        No action needed; benchmark asset.                          
+
+TRK00116  0.2152      Low        No action needed; benchmark asset.                          
+
+TRK00076  0.2098      Low        No action needed; benchmark asset.                          
+
+TRK00069  0.2039      Low        No action needed; benchmark asset.                          
+
+TRK00084  0.1982      Low        No action needed; benchmark asset.                          
+
+TRK00049  0.1705      Low        No action needed; benchmark asset.                          
+
+TRK00107  0.1574      Low        No action needed; benchmark asset.                          
+
+TRK00019  0.1476      Low        No action needed; benchmark asset.                          
+
+TRK00036  0.1392      Low        No action needed; benchmark asset.                          
+
+TRK00070  0.1366      Low        No action needed; benchmark asset.                          
+
+TRK00083  0.0         Low        No action needed; benchmark asset.                          

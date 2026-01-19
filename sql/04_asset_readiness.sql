@@ -3,7 +3,7 @@
 --Note to self: truck_summary table has been created in prior steps
 
 ---- Q1 Which trucks have the highest total downtime?
-
+.print '=== Q1 Which trucks have the highest total downtime? ===';
 SELECT
     truck_id,
     total_downtime_hours
@@ -13,7 +13,7 @@ LIMIT 10;
 
 
 ---- Q2 Which trucks have the most maintenance events?
-
+.print "=== Q2 Which trucks have the most maintenance events? ===";
 SELECT
     truck_id,
     maintenance_events AS total_maintenance_events
@@ -22,7 +22,7 @@ FROM truck_summary
     LIMIT 10;
 
 ---- Q3 Does truck age correlate with downtime and cost?
-
+.print '=== Q3 Does truck age correlate with downtime and cost? ===';
 SELECT
     model_year,
     COUNT(*) AS truck_count,
@@ -35,7 +35,7 @@ FROM truck_summary
 ;
 
 ---- Q4 Which trucks are “high downtime, low miles” (bad assets)?
-
+.print '=== Q4 Which trucks are “high downtime, low miles” (bad assets)? ===';
 SELECT
     truck_id,
     total_downtime_hours,
@@ -48,10 +48,7 @@ FROM truck_summary
 ;
 
 ---- Q5 Which trucks are “high miles, low downtime” (best assets)?
--- Identify highly reliable, high-utilization assets.
--- Inverse of Q4
--- Focus on mileage efficiency and availability
-
+.print '=== Q5 Which trucks are “high miles, low downtime” (best assets)? ===';
 SELECT
     truck_id,
     total_downtime_hours,
@@ -64,9 +61,7 @@ FROM truck_summary
 ;
 
 ---- Q6 What share of fleet downtime comes from the worst 10% of trucks?
-
---WITH creates temporary tables, that exist only for the duration of the query.
--- Use NTILE to segment trucks into deciles based on downtime.
+.print '=== Q6 What share of fleet downtime comes from the worst 10% of trucks? ===';
 WITH ranked AS ( 
     SELECT
         truck_id,
@@ -94,7 +89,7 @@ FROM totals, worst_subset;
 ;
 
 ---- Q7 Which maintenance types cause the most downtime?
-
+.print '=== Q7 Which maintenance types cause the most downtime? ===';
 SELECT
     maintenance_type,
     SUM(downtime_hours) AS total_downtime_hours,
@@ -106,11 +101,7 @@ LIMIT 10;
 
 
 ---- Q8 Which facilities or terminals generate the most downtime?
-
--- Assess whether downtime is driven by location-specific issues.
--- Use maintenance_records
--- Group by facility or terminal field
-
+.print '=== Q8 Which facilities or terminals generate the most downtime? ===';
 SELECT
     facility_location,
     SUM(downtime_hours) AS total_downtime_hours,

@@ -1,11 +1,26 @@
-truck_id,total_maintenance_events
-TRK00003,41
-TRK00073,39
-TRK00044,38
-TRK00118,35
-TRK00013,34
-TRK00014,34
-TRK00099,34
-TRK00005,33
-TRK00026,32
-TRK00033,32
+=== Q2: Most maintenance events === ;
+truck_id  total_maintenance_events
+--------  ------------------------
+TRK00003  41                      
+TRK00073  39                      
+TRK00044  38                      
+TRK00118  35                      
+TRK00013  34                      
+TRK00014  34                      
+TRK00099  34                      
+TRK00005  33                      
+TRK00026  32                      
+TRK00033  32                      
+outputs/q3_truck_correlation_dc.csv
+'=== Q3: Truck age correlation with downtime and cost ==='
+----------------------------------------------------------
+=== Q3: Truck age correlation with downtime and cost ===  
+model_year  truck_count  average_downtime  average_maintenance_cost
+----------  -----------  ----------------  ------------------------
+2021        1            787.9             70708.48                
+2018        11           648.363636363636  51621.5181818182        
+2017        11           641.854545454545  51790.9090909091        
+2016        11           617.954545454545  49636.1354545455        
+2015        78           597.538461538462  46984.8292307692        
+2020        3            488.8             40874.2366666667        
+2019        5            475.66            37778.244               

@@ -1,8 +1,6 @@
-.headers on
-.mode csv
-
 -- Q1: Top downtime trucks
 .output outputs/q1_top_downtime_trucks.csv
+.print '=== Q1: Top downtime trucks ===';
 SELECT
   truck_id,
   total_downtime_hours
@@ -12,6 +10,7 @@ LIMIT 10;
 
 -- Q2: Most maintenance events
 .output outputs/q2_top_maintenance_events.csv
+.print '=== Q2: Most maintenance events ===';
 SELECT
   truck_id,
   maintenance_events AS total_maintenance_events
@@ -19,8 +18,23 @@ FROM truck_summary
 ORDER BY maintenance_events DESC
 LIMIT 10;
 
+---- Q3 Does truck age correlate with downtime and cost?
+.print outputs/q3_truck_correlation_dc.csv
+SELECT '=== Q3: Truck age correlation with downtime and cost ===';
+SELECT
+    model_year,
+    COUNT(*) AS truck_count,
+    AVG(total_downtime_hours) AS average_downtime,
+    AVG(total_maintenance_cost) AS average_maintenance_cost
+FROM truck_summary
+    WHERE model_year IS NOT NULL AND model_year <> ''
+    GROUP BY model_year
+    ORDER BY average_downtime DESC, average_maintenance_cost DESC
+;
+
 -- Q4: Worst downtime per mile (bad assets)
 .output outputs/q4_worst_downtime_per_mile.csv
+.print '=== Q4: Worst downtime per mile (bad assets) ===';
 SELECT
   truck_id,
   total_downtime_hours,
@@ -34,6 +48,7 @@ LIMIT 10;
 
 -- Q5: Best downtime per mile (best assets)
 .output outputs/q5_best_downtime_per_mile.csv
+.print '=== Q5: Best downtime per mile (best assets) ===';
 SELECT
   truck_id,
   total_downtime_hours,
@@ -47,6 +62,7 @@ LIMIT 10;
 
 -- Q6: Downtime concentration (worst 10%)
 .output outputs/q6_worst10_share.csv
+.print '=== Q6: Downtime concentration (worst 10%) ===';
 WITH ranked AS (
   SELECT
     truck_id,
@@ -67,7 +83,8 @@ SELECT
 FROM totals, worst_subset;
 
 -- Q7: Downtime by maintenance type
-.output outputs/q7_downtime_by_maintenance_type.csv
+.print outputs/q7_downtime_by_maintenance_type.csv
+SELECT '=== Q7: Downtime by maintenance type ===';
 SELECT
   maintenance_type,
   SUM(COALESCE(downtime_hours,0)) AS total_downtime_hours,
@@ -79,6 +96,7 @@ LIMIT 10;
 
 -- Q8: Downtime by facility (if available)
 .output outputs/q8_downtime_by_facility.csv
+.print '=== Q8: Downtime by facility ===';
 SELECT
   facility_location,
   SUM(COALESCE(downtime_hours,0)) AS total_downtime_hours,
@@ -90,13 +108,16 @@ GROUP BY facility_location
 ORDER BY total_downtime_hours DESC
 LIMIT 10;
 
---06_risk_score.sql
-.output outputs/q9_truck_risk_score.csv
+
+.output outputs/q_truck_risk_labeled.csv
 SELECT
   truck_id,
-  risk_score
-FROM truck_risk_score
+  risk_score,
+  risk_tier,
+  recommended_action
+FROM truck_risk_labeled
 ORDER BY risk_score DESC;
 .output stdout
 .mode column
 .headers on
+

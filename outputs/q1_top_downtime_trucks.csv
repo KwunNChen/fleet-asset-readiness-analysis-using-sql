@@ -1,11 +1,13 @@
-truck_id,total_downtime_hours
-TRK00003,1133.1
-TRK00044,1080.4
-TRK00073,996.3
-TRK00046,974.5
-TRK00014,940.4
-TRK00118,917.3
-TRK00033,908.2
-TRK00013,868.5
-TRK00062,862.1
-TRK00078,839.6
+=== Q1: Top downtime trucks === ;
+truck_id  total_downtime_hours
+--------  --------------------
+TRK00003  1133.1              
+TRK00044  1080.4              
+TRK00073  996.3               
+TRK00046  974.5               
+TRK00014  940.4               
+TRK00118  917.3               
+TRK00033  908.2               
+TRK00013  868.5               
+TRK00062  862.1               
+TRK00078  839.6               
