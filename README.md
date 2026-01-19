@@ -50,6 +50,8 @@ logistics-sql/
 
 | └── 06_risk_score.sql #Utilizes stats from truck_summary to calculate score
 
+| └── 99_run_all.sql #Run this to run all other sql files
+
 ├── logistics.db # SQLite database, alternatively can use logistics.zip. ONLY USE ONE
 
 ├── logistics.zip # SQLite database, unzip it
