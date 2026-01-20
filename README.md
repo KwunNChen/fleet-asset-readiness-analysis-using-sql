@@ -1,7 +1,5 @@
 # Fleet Asset Readiness Analysis Using SQL
 
-COMPLETION ON 1/20/2026
-
 ## Overview
 This mini-project analyzes asset readiness in a simulated Class 8 trucking fleet using SQL.
 The objective is to identify which assets most negatively impact operational readiness
@@ -20,7 +18,13 @@ The analysis uses a logistics dataset representing three years (2022–2024) of 
 - Drivers, routes, and facilities
 - Delivery and operational performance metrics
 
+This project has synthesized and analyzed the massive database in the form of various queries.
+
 **Data Source:** Kaggle — Logistics Operations Database by Yogape Rodriguez
+
+### Tableau Visualization
+https://public.tableau.com/views/Class-8LogiCompanyFictionalAnalysis/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
 
 ## Tools Used
 - SQLite
@@ -71,12 +75,8 @@ logistics-sql/
 ## Key Insight
 Initial results indicate that asset age alone is not a strong predictor of downtime or
 maintenance cost. While older trucks show slightly higher averages, readiness degradation
-appears to be driven more by operational and maintenance factors than by calendar age
+appears to be driven more by operational and maintenance factors than by age
 alone.
-
-
-### Readiness Risk Score
-A composite 0–1 risk score was computed per truck by normalizing downtime-per-mile, total downtime, maintenance events, and maintenance cost, then combining them with weighted importance. Higher scores indicate worse readiness efficiency and sustainment burden.
 
 ## Findings (SQL Outputs)
 

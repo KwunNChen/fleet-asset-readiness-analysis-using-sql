@@ -3,6 +3,7 @@
 -- Build a composite readiness risk score per truck and label into action tiers.
 -- Uses NULLIF() to avoid division-by-zero during downtime_per_mile and normalization.
 
+-- Risk Score: A composite 0–1 risk score computed per truck by normalizing downtime-per-mile, total downtime, maintenance events, and maintenance cost, then combining them with weighted importance. Higher scores indicate worse readiness efficiency and sustainment burden.
 DROP TABLE IF EXISTS truck_risk_score;
 
 CREATE TABLE truck_risk_score AS
