@@ -23,6 +23,7 @@ This project has synthesized and analyzed the massive database in the form of va
 **Data Source:** Kaggle — Logistics Operations Database by Yogape Rodriguez
 
 ### Tableau Visualization
+<img width="2398" height="1598" alt="Dashboard 1" src="https://github.com/user-attachments/assets/0955e37d-1da4-498a-b1f7-0b52b5518269" />
 https://public.tableau.com/views/Class-8LogiCompanyFictionalAnalysis/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 
