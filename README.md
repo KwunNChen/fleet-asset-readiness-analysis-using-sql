@@ -91,6 +91,10 @@ alone.
 See `outputs/` for exported CSV results.
 
 ## Quick Start
+Download all files, and place them in a folder. 
+data.zip is a zipped version of the data folder, download either. Be sure to unzip.
+
+logistics.zip is just a zipped version of the logistics database, download either. Be sure to unzip.
 
 ```bash```
 Run in terminal:
