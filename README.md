@@ -1,6 +1,6 @@
 # Fleet Asset Readiness Analysis Using SQL
 
-WORK IN PROGRESS
+COMPLETION ON 1/20/2026
 
 ## Overview
 This mini-project analyzes asset readiness in a simulated Class 8 trucking fleet using SQL.
