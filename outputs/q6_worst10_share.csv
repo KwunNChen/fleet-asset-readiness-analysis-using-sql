@@ -1,17 +1,2 @@
-=== Q6: Downtime concentration (worst 10%) === ;
-subset_total  fleet_total  share            
-------------  -----------  -----------------
-11140.5       72230.5      0.154235399173479
-outputs/q7_downtime_by_maintenance_type.csv
-'=== Q7: Downtime by maintenance type ==='
-------------------------------------------
-=== Q7: Downtime by maintenance type ===  
-maintenance_type  total_downtime_hours  event_count
-----------------  --------------------  -----------
-Inspection        10657.7               432        
-Preventive        10569.8               422        
-Repair            10452.9               424        
-Engine            10396.3               415        
-Tire              10087.1               414        
-Transmission      10034.9               411        
-Brake             10031.8               402        
+subset_total,fleet_total,share
+11140.5,72230.5,0.154235399173479

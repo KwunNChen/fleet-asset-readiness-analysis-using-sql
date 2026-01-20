@@ -1,12 +1,8 @@
-'=== Q7: Downtime by maintenance type ==='
-------------------------------------------
-=== Q7: Downtime by maintenance type ===  
-maintenance_type  total_downtime_hours  event_count
-----------------  --------------------  -----------
-Inspection        10657.7               432        
-Preventive        10569.8               422        
-Repair            10452.9               424        
-Engine            10396.3               415        
-Tire              10087.1               414        
-Transmission      10034.9               411        
-Brake             10031.8               402        
+maintenance_type,total_downtime_hours,event_count
+Inspection,10657.7,432
+Preventive,10569.8,422
+Repair,10452.9,424
+Engine,10396.3,415
+Tire,10087.1,414
+Transmission,10034.9,411
+Brake,10031.8,402

@@ -1,13 +1,11 @@
-=== Q8: Downtime by facility === ;
-facility_location  total_downtime_hours  event_count
------------------  --------------------  -----------
-Los Angeles        3696.6                139        
-Houston            3397.2                131        
-Atlanta            3377.6                130        
-Oklahoma City      3269.7                133        
-Chicago            3256.4                127        
-Milwaukee          3231.0                127        
-Philadelphia       3160.1                129        
-Dallas             3021.4                120        
-Memphis            2952.5                116        
-Denver             2925.3                121        
+facility_location,total_downtime_hours,event_count
+"Los Angeles",3696.6,139
+Houston,3397.2,131
+Atlanta,3377.6,130
+"Oklahoma City",3269.7,133
+Chicago,3256.4,127
+Milwaukee,3231.0,127
+Philadelphia,3160.1,129
+Dallas,3021.4,120
+Memphis,2952.5,116
+Denver,2925.3,121
