@@ -108,16 +108,22 @@ GROUP BY facility_location
 ORDER BY total_downtime_hours DESC
 LIMIT 10;
 
-
+-- Risk scoreed trucks
 .output outputs/q_truck_risk_labeled.csv
 SELECT
   truck_id,
   risk_score,
   risk_tier,
-  recommended_action
+  recommended_action,
+  downtime_per_mile
 FROM truck_risk_labeled
 ORDER BY risk_score DESC;
 .output stdout
 .mode column
 .headers on
+
+-- Full truck summary export
+.output outputs/truck_summary.csv
+SELECT * FROM truck_summary;
+.output stdout
 
