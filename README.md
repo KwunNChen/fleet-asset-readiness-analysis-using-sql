@@ -26,7 +26,7 @@ The analysis uses a logistics dataset representing three years (2022–2024) of 
 - SQLite
 - SQL
 - Visual Studio Code (terminal-based workflow)
-- Snowflake's Tableau
+- Tableau
 
 ## Project Structure
 logistics-sql/
@@ -68,36 +68,12 @@ logistics-sql/
 3. Answered readiness-focused questions using SQL queries designed to reflect
    real operational decision-making rather than toy examples.
 
-## Asset Readiness Questions
-The analysis addresses the following readiness questions:
-
-1. Which trucks have the highest total downtime?
-2. Which trucks have the most maintenance events?
-3. Does truck age correlate with downtime and maintenance cost?
-4. Which trucks exhibit high downtime but low utilization (underperforming assets)?
-5. Which trucks deliver high utilization with low downtime (best-performing assets)?
-6. What proportion of fleet downtime is driven by the worst-performing assets?
-7. Which maintenance types contribute the most to downtime?
-8. Which facilities or terminals generate the most maintenance-related downtime?
-
 ## Key Insight
 Initial results indicate that asset age alone is not a strong predictor of downtime or
 maintenance cost. While older trucks show slightly higher averages, readiness degradation
 appears to be driven more by operational and maintenance factors than by calendar age
-alone. (WORK IN PROGRESS)
+alone.
 
-## Why This Project Matters
-This project demonstrates:
-- Comfort working with multi-table operational datasets
-- Correct use of aggregation and joins to avoid data distortion
-- Translation of operational questions into SQL logic
-- Analytical judgment when interpreting non-obvious results
-
-The workflow and analysis are representative of fleet readiness and sustainment analysis
-used in logistics, infrastructure, and defense-adjacent environments.
-
-## Future Work
-- Visualize using a dashboard from Tableau
 
 ### Readiness Risk Score
 A composite 0–1 risk score was computed per truck by normalizing downtime-per-mile, total downtime, maintenance events, and maintenance cost, then combining them with weighted importance. Higher scores indicate worse readiness efficiency and sustainment burden.
@@ -122,4 +98,4 @@ Run in terminal:
 
 sqlite3 logistics.db ".read sql/99_run_all.sql"
 
-It will read the other sql files which creates tables, imports raw data, builds summaries, runs readiness analysis, computes risk scores, exports all outputs
+It will read the other sql files which creates tables, imports raw data, builds summaries, runs readiness analysis, computes risk scores, exports all outputs.
