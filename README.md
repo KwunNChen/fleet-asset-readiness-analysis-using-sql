@@ -92,8 +92,6 @@ See `outputs/` for exported CSV results.
 
 ## Quick Start
 
-## Run Everything (Reproducible Pipeline)
-
 ```bash```
 Run in terminal:
 
